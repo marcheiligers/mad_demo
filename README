@@ -1,0 +1,9 @@
+#Error #
+
+ree-1.8.7-2010.02 > Notifier.doit
+NoMethodError: undefined method `body' for nil:NilClass
+	from /Users/nsingh/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/mad_mimi_mailer-0.2.0/lib/mad_mimi_mail.rb:16:in `deliver!'
+	from /Users/nsingh/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/mail-2.2.13/lib/mail/message.rb:243:in `deliver!'
+	from /Users/nsingh/dev/scratch/mad_demo/app/mailers/notifier.rb:23:in `doit'
+	from (irb):1
+
