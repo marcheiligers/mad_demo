@@ -1,5 +1,5 @@
-EMAIL = '**'
-API_KEY = '**'
+EMAIL = ''
+API_KEY = ''
 RECIPIENT = EMAIL
 
 require 'mad_mimi_mail'
@@ -12,12 +12,12 @@ class Notifier < MadMimiMailer
 
   def welcome
     @greeting = "Hi"
-    mail(:to => RECIPIENT, :subject => 'welcome') do |format|
-      format.text
-    end
+    mail(:to => RECIPIENT, :subject => 'welcome', :promotion_name => 'mad_demo')
   end
 
   def self.doit
-    Notifier.welcome.deliver!
+    n = Notifier.welcome.deliver!
+    puts n.transaction_id
+    puts n.errors
   end
 end
